@@ -43,7 +43,7 @@ public class usersControler {
         Optional<usersEntity> user = service.listarId(id);
         model.addAttribute("usuarios",user);
         return "interfazUsuario";
-    }
+    } //jbkjbk
 
         @GetMapping("/eliminar/{id}")
     public  String eliminar(Model model, @PathVariable int id){

@@ -35,7 +35,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="" th:href="@{/nuevo}"><button type="button" class="btn btn-dark">Agregar<br><img th:src="@{agregar.png}" height="50" width="50"/></button></a>
+                <a th:href="@{/nuevo}"><button type="button" class="btn btn-dark">Agregar<br><img th:src="@{agregar.png}" height="50" width="50"/></button></a>
             </li>
             <li class="nav-item">
                 <a class=""><button type="button" class="btn btn-dark">Principal <br><img th:src="@{principal.png}" height="50" width="50"/></button></a>
@@ -69,7 +69,7 @@
 
     <div class="col-sm-12">
 
-        <form th:action="@{/save}" th:object=${users} method="POST ">
+        <form th:action="@{/save}" th:object="${usuarios}" method="POST ">
 
         <div class="card" style=" background: #FFFAE1;">
             <div class="card-header">

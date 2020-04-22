@@ -20,7 +20,7 @@ public class usersService implements InterfazService {
 
     @Override
     public Optional<usersEntity> listarId(int id) {
-        return Optional.empty();
+        return data.findById(id);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class usersService implements InterfazService {
 
     @Override
     public void delete(int id) {
-
+    data.deleteById(id);
     }
 
 

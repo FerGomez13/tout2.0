@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Usuarios</title>
+    <title>Formulario Usuarios</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body style=" background: #FFFAE1;">
-<!--Encabezado-->
 <div class="row" style="margin-bottom:0; background: #07d7e3;font-family: 'Oswald', sans-serif;color: white; text-align: center">
     <div class="col-sm-2">
 
@@ -22,10 +22,6 @@
         <h1 > ODONTOLOGÍA, MEDICINA & NUTRICIÓN</h1>
     </div>
 </div>
-
-
-<!--EmpiezaBarra de Herramientas -->
-
 <div class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <a class=""><button type="button" class="btn btn-dark">Regresar<br><img th:src="@{izq.png}" height="50" width="50"/></button></a>
 
@@ -62,80 +58,57 @@
             </li>
         </ul>
     </div>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2 " type="search" placeholder="Buscar" aria-label="Search">
-            <a class="btn btn-dark"><img th:src="@{buscar.png}" height="50" width="50"/></a>
-        </form>
-</nav>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2 " type="search" placeholder="Buscar" aria-label="Search">
+        <a class="btn btn-dark"><img th:src="@{buscar.png}" height="50" width="50"/></a>
+    </form>
+    </nav>
 </div>
-
-<!--Termina Barra de Herramientas -->
-<!--<div class="row" >
-    <div class="col-sm-12" style="text-align: center; color:black; font-family: 'Mukta', sans-serif; font-size: 35px;">
-        <b><br>
-            Usuarios</b>
-    </div>
-
-<br><br><br>
-    <div class="row">
-        <div class="col-sm-9" style="text-align: center; color:black; font-family: 'Mukta', sans-serif; font-size: 20px;">
-            <table class="table table table-bordered table-hover" style="font-family: 'Lato', sans-serif;">
-                <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Apellido Paterno</th>
-                    <th scope="col">Apellido Materno</th>
-                    <th scope="col">Contraseña</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>Otto</td>
-                    <td>***</td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-
-
-</div>
-</div>
-</div>
-
-</div>-->
 
 <div class="container mt-4" style="font-size: 18px">
-    <table class="table table-bordered table-hover">
-        <thread class="thead-dark">
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Contraseña</th>
-            </tr>
-        </thread>
-        <tbody>
-            <tr th:each="usuario:${usuarios}">
-                <td th:text="${usuario.id}"></td>
-                <td th:text="${usuario.nombre}"></td>
-                <td th:text="${usuario.aPaterno}"></td>
-                <td th:text="${usuario.aMaterno}"></td>
-                <td th:text="${usuario.contrasena}"></td>
-                <td>
-                    <a class="btn btn-warning">Editar</a>
-                    <a class="btn btn-danger">Eliminar</a>
-                </td>
 
-            </tr>
+    <div class="col-sm-12">
 
-        </tbody>
-    </table>
+        <form th:action="@{/save}" th:object=${users} method="POST ">
+
+        <div class="card" style=" background: #FFFAE1;">
+            <div class="card-header">
+                <h3>Registro de Usuarios</h3>
+
+            </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input th:field="*{nombre}" type="text" placeholder="Nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido Paterno</label>
+                        <input th:field="*{apaterno}" type="text" placeholder="Apellido Paterno" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input th:field="*{aMaterno}" type="text" placeholder="Apellido Materno" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input th:field="*{contrasena}" type="text" placeholder="Contraseña" class="form-control">
+                    </div>
+                </div>
+
+                    <div class="card-footer " style="text-align: center">
+                        <input type="submit" value="Guardar" class="btn btn-info">
+                    </div>
+
+
+
+
+        </div>
+
+        </form>
+    </div>
+
+
 </div>
+
 </body>
 </html>

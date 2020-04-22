@@ -25,11 +25,19 @@ public class usersService implements InterfazService {
 
     @Override
     public int save(usersEntity u) {
-        return 0;
+        int res = 0;
+        usersEntity usuario = data.save(u);
+        if (!usuario.equals(null)){
+            res=1;
+        }
+        return res;
     }
 
     @Override
     public void delete(int id) {
 
     }
+
+
+
 }

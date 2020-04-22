@@ -19,7 +19,8 @@ public class usersEntity {
     private String aPaterno;
     private String aMaterno;
     private String contrasena;
-
+//hola pero este no es el peiro#2?
+    //esta bien ...jajajaja = kakaka en kataka jajajajaj ya me voy entonces? pues siii bai.
     public usersEntity() {
     }
 
@@ -31,6 +32,7 @@ public class usersEntity {
         this.aPaterno=aPaterno;
         this.contrasena=contrasena;
     }
+
 
 
 

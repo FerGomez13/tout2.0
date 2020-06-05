@@ -1,7 +1,6 @@
 package com.tout.model;
 
 
-
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Entity;
@@ -10,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
 @Entity
-@Table( name = "tb_Socio")
+@Table(name = "tb_Socio")
 public class userSocio {
 
     @javax.persistence.Id
@@ -30,7 +29,7 @@ public class userSocio {
     public userSocio() {
     }
 
-    public userSocio(int id,String nombreUsuario ,String nombre, String apellidoPaterno, String apellidoMaterno, String area, String especialidad, String horarioDeLabor, String telefono, String contrasena ) {
+    public userSocio(int id, String nombreUsuario, String nombre, String apellidoPaterno, String apellidoMaterno, String area, String especialidad, String horarioDeLabor, String telefono, String contrasena) {
         this.id = id;
         this.nombreUsuario = nombreUsuario;
         this.nombre = nombre;
@@ -43,8 +42,6 @@ public class userSocio {
         this.contrasena = contrasena;
 
     }
-
-
 
 
     public int getId() {

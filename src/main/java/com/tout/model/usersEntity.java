@@ -12,7 +12,8 @@ import javax.swing.*;
 @Entity
 @Table(name = "users")
 public class usersEntity {
-   @javax.persistence.Id
+
+    @javax.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,15 +25,14 @@ public class usersEntity {
     public usersEntity() {
     }
 
-    public usersEntity(int id, String nombre, String a_Paterno, String a_Materno, String contrasena ) {
+    public usersEntity(int id, String nombre, String a_Paterno, String a_Materno, String contrasena) {
         super();
-        this.id=id;
-        this.nombre=nombre;
-        this.a_Materno=a_Materno;
-        this.a_Paterno=a_Paterno;
-        this.contrasena=contrasena;
+        this.id = id;
+        this.nombre = nombre;
+        this.a_Materno = a_Materno;
+        this.a_Paterno = a_Paterno;
+        this.contrasena = contrasena;
     }
-
 
 
     public int getId() {

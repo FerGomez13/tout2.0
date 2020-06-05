@@ -6,28 +6,29 @@
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap https://fonts.googleapis.com/css?family=Bree+Serif&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
-    
-    
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body style=" background: #FFFAE1;">
 <!--Encabezado-->
-    <div class="row" style="margin-bottom:0; background: #07d7e3;font-family: 'Oswald', sans-serif;color: white; text-align: center">
-        <div class="col-sm-2">
+<div class="row"
+     style="margin-bottom:0; background: #07d7e3;font-family: 'Oswald', sans-serif;color: white; text-align: center">
+    <div class="col-sm-2">
 
-            <img src="../static/santelogo.png" height="200" width="200"/>
-        </div>
-        <div class="col-sm-7" style="margin-top: 60px">
-            <h1 > ODONTOLOGÍA, MEDICINA & NUTRICIÓN</h1>
-        </div>
+        <img src="../static/santelogo.png" height="200" width="200"/>
     </div>
-<nav class="navbar navbar-expand-sm navbar-dark sticky-top" style=" background: #123658; font-family: 'Bree Serif', serif; ">
+    <div class="col-sm-7" style="margin-top: 60px">
+        <h1> ODONTOLOGÍA, MEDICINA & NUTRICIÓN</h1>
+    </div>
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top"
+     style=" background: #123658; font-family: 'Bree Serif', serif; ">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -48,65 +49,68 @@
 <div class="container">
 
     <!--Empieza contenido de Login -->
-<form  class="" >
-    <div class="row" >
-        <div class="col-sm-12" style="text-align: center; color:black; font-family: 'Mukta', sans-serif; font-size: 35px;">
-            <b>Iniciar Sesión</b>
-        </div>
+    <form class="">
+        <div class="row">
+            <div class="col-sm-12"
+                 style="text-align: center; color:black; font-family: 'Mukta', sans-serif; font-size: 35px;">
+                <b>Iniciar Sesión</b>
+            </div>
 
-    </div>
-    <div class="col-sm-6 offset-md-3 " style="border: 0px solid #FFFFFF; border-radius: 40px 40px 40px 40px; margin-top: 250px; box-shadow: 0 15px 25px
+        </div>
+        <div class="col-sm-6 offset-md-3 " style="border: 0px solid #FFFFFF; border-radius: 40px 40px 40px 40px; margin-top: 250px; box-shadow: 0 15px 25px
   	rgba(0,0,0,.9); background: rgba(0,0,0,.6) ; color:white; text-align: center; ">
 
-        <div ><img src="../static/user_male_circle_120px.png" height="120" width="120"/></div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Administrador</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Recepcionista</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-            <label class="form-check-label" for="inlineRadio3">Socio</label>
-        </div>
-        <div class="form-group wrap-input100" >
-						<input class="input100" type="text" name="email" placeholder="Email">
+            <div><img src="../static/user_male_circle_120px.png" height="120" width="120"/></div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                       value="option1">
+                <label class="form-check-label" for="inlineRadio1">Administrador</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                       value="option2">
+                <label class="form-check-label" for="inlineRadio2">Recepcionista</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                       value="option3">
+                <label class="form-check-label" for="inlineRadio3">Socio</label>
+            </div>
+            <div class="form-group wrap-input100">
+                <input class="input100" type="text" name="email" placeholder="Email">
 
-           <!-- <input type="text" class="form-control" id="uname" placeholder="Nombre" name="Nombre" >-->
-            <span class="symbol-input100">
+                <!-- <input type="text" class="form-control" id="uname" placeholder="Nombre" name="Nombre" >-->
+                <span class="symbol-input100">
                 <span class="lnr lnr-envelope"></span>
 				</span>
 
+            </div>
+            <div class="form-group">
+
+
+                <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="Contraseña">
+
+            </div>
+
+
+            <!--aqui me quede
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">@</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+          </div>-->
+
+
+            <a href="interfazUsuario.html" class="btn btn-outline-light " role="button"
+               style="border-radius: 40px 40px 40px 40px;">Iniciar Sesión</a>
+
+            <!--<a href="interfazUsuario.html"><button type="submit" class="btn btn-outline-light" style="border-radius: 40px 40px 40px 40px;">Iniciar Sesión</button>
+           </a> -->
         </div>
-        <div class="form-group">
-            
-
-            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="Contraseña" >
-
-        </div>
-        
-        
-        
-        <!--aqui me quede
-    <div class="col-auto">
-      <label class="sr-only" for="inlineFormInputGroup">Username</label>
-      <div class="input-group mb-2">
-        <div class="input-group-prepend">
-          <div class="input-group-text">@</div>
-        </div>
-        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-      </div>-->
-
-                
-                
-        <a href="interfazUsuario.html" class="btn btn-outline-light " role="button" style="border-radius: 40px 40px 40px 40px;" >Iniciar Sesión</a>
-
-        <!--<a href="interfazUsuario.html"><button type="submit" class="btn btn-outline-light" style="border-radius: 40px 40px 40px 40px;">Iniciar Sesión</button>
-       </a> -->
-    </div>
-</form>
+    </form>
     <!-- Termina contenido de Login -->
 </div>
 

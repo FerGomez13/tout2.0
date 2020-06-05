@@ -27,10 +27,10 @@ public class userSocioService implements InterfazServiceSocio {
 
     @Override
     public int save(userSocio u) {
-        int res=0;
-        userSocio us =  dataSocio.save(u);
-        if (!us.equals(null)){
-            res=1;
+        int res = 0;
+        userSocio us = dataSocio.save(u);
+        if (!us.equals(null)) {
+            res = 1;
         }
         return res;
 

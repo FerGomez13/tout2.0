@@ -1,42 +1,43 @@
 .row {
- background: red;
+    background: red;
 }
 
 .symbol-input100 {
-  font-size: 24px;
-  color: #999999;
+    font-size: 24px;
+    color: #999999;
 
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  border-radius: 25px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding-left: 23px;
-  padding-bottom: 5px;
-  pointer-events: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 23px;
+    padding-bottom: 5px;
+    pointer-events: none;
 
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 textarea:focus, input:focus {
-  border-color: transparent !important;
+    border-color: transparent !important;
 }
+
 .form-control-feedback {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
 }
 
 .form-control {
-  padding-left: 30px!important;
+    padding-left: 30px !important;
 }

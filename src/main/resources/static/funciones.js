@@ -1,13 +1,13 @@
-
-$(document).ready(function() {
+$(document).ready(function () {
     $('#tusuarios').DataTable();
 });
-$(document).ready(function(){
+$(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
+
 function eliminar(id) {
     swal({
-        title : "¿Esta seguro que desea eliminar este usuario?",
+        title: "¿Esta seguro que desea eliminar este usuario?",
         text: "Esta operación es irreversible",
         icon: "warning",
         buttons: true,
@@ -16,15 +16,15 @@ function eliminar(id) {
         .then((OK) => {
             if (OK) {
                 $.ajax({
-                    url: "/eliminar/"+id,success :function (res) {
+                    url: "/eliminar/" + id, success: function (res) {
                         console.log(res);
                     }
                 });
-                swal("Registro eliminado",{
+                swal("Registro eliminado", {
                     icon: "success",
-                }).then((ok)=>{
-                    if (ok){
-                        location.href="/listar";
+                }).then((ok) => {
+                    if (ok) {
+                        location.href = "/listar";
                     }
 
                 });

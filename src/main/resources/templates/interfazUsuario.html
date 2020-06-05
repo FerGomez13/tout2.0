@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap https://fonts.googleapis.com/css?family=Bree+Serif&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,56 +16,78 @@
 
 </head>
 <body style=" background: #dae1e7;">
-    <div class="row" style="background: #07d7e3;font-family: 'Oswald';color: white;text-shadow: 1px 1px 1px #000000;">
-        <div class="col-sm-2">
-            <img th:src="@{santelogo.png}" height="100" width="100"/>
-        </div>
-        <div class="col-sm-10" style="margin-top: 30px; font-size: 30px;padding-left: 175px">
-            <label>ODONTOLOGÍA, MEDICINA & NUTRICIÓN</label>
-        </div>
-        <label style="font-size: 15px; position: absolute; top: 0; right: 35px;"> ¡Bienvenid@ usuarioA!</label>
-        <a class="" data-toggle="tooltip" data-placement="left" title="Salir"><button type="button" class="btn btn-dark btn-xs" style="position: absolute;text-shadow: 1px 1px 1px #000000; top: 0; right: 0; font-size: 10px; margin: 0px;padding: 0px;"><img th:src="@{salir.png}" height="30" width="30"/></button></a>
-        <a class=""data-toggle="tooltip" data-placement="left" title="Principal"><button type="button" class="btn btn-dark btn-xs" style="position: absolute;text-shadow: 1px 1px 1px #000000; top: 33px; right: 0; font-size: 10px; margin: 0px;padding: 0px;"><img th:src="@{principal.png}" height="30" width="30"/></button></a>
-        <!--<a class=""data-toggle="tooltip" data-placement="left" title="Imprimir"><button type="button" class="btn btn-dark btn-xs" style="position: absolute;font-size: 10px;top: 66px; right: 0;margin: 0px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{impresora.png}" height="30" width="30"/></button></a>
-    --></div>
-
-    <div class="row bg-dark justify-content-between">
-        <ul class="nav nav-tabs" role="tablist" style="font-family: 'Oswald', sans-serif; text-align: center;text-shadow: 1px 0px 0px #000000;">
-            <li class="nav-item" >
-                <a class="nav-link activeb bg-dark" data-toggle="tab" href="#home" style="color: white;">Usuarios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link bg-dark" data-toggle="tab" href="#menu1" style=";color: white;">Socios</a>
-            </li>
-        </ul>
-
-
-        <form class="form-inline col-3">
-            <a class="" href="http://localhost:8080/nuevo" data-toggle="tooltip" data-placement="left" title="Agregar Usuario"><button type="button" class="btn btn-dark btn-xs " style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{agregar.png}" height="30" width="30"/></button></a><br>
-            <a class="" href="http://localhost:8080/nuevoSocio" data-toggle="tooltip" data-placement="left" title="Agregar Socio"><button  type="button" class="btn btn-dark " style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{add_50px.png}" height="25" width="25"/></button></a>
-            <a href="http://localhost:8080/"></a>
-            <input class="form-control " type="search" placeholder="Buscar" aria-label="Search">
-            <a class="btn btn-dark btn-xs" style="padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{buscar.png}" height="30" width="30"/></a>
-        </form>
+<div class="row" style="background: #07d7e3;font-family: 'Oswald';color: white;text-shadow: 1px 1px 1px #000000;">
+    <div class="col-sm-2">
+        <img th:src="@{santelogo.png}" height="100" width="100"/>
     </div>
-    <!--EmpiezaBarra de Herramientas -->
-   <!-- <div class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top " style="font-family: 'Oswald';text-shadow: 1px 1px 1px #000000;color: white; text-align: center;font-size: 10px; padding: 0px" >
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="col-sm-10" style="margin-top: 30px; font-size: 30px;padding-left: 175px">
+        <label>ODONTOLOGÍA, MEDICINA & NUTRICIÓN</label>
+    </div>
+    <label style="font-size: 15px; position: absolute; top: 0; right: 35px;"> ¡Bienvenid@ usuarioA!</label>
+    <a class="" data-toggle="tooltip" data-placement="left" title="Salir">
+        <button type="button" class="btn btn-dark btn-xs"
+                style="position: absolute;text-shadow: 1px 1px 1px #000000; top: 0; right: 0; font-size: 10px; margin: 0px;padding: 0px;">
+            <img th:src="@{salir.png}" height="30" width="30"/></button>
+    </a>
+    <a class="" data-toggle="tooltip" data-placement="left" title="Principal">
+        <button type="button" class="btn btn-dark btn-xs"
+                style="position: absolute;text-shadow: 1px 1px 1px #000000; top: 33px; right: 0; font-size: 10px; margin: 0px;padding: 0px;">
+            <img th:src="@{principal.png}" height="30" width="30"/></button>
+    </a>
+    <!--<a class=""data-toggle="tooltip" data-placement="left" title="Imprimir"><button type="button" class="btn btn-dark btn-xs" style="position: absolute;font-size: 10px;top: 66px; right: 0;margin: 0px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{impresora.png}" height="30" width="30"/></button></a>
+--></div>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+<div class="row bg-dark justify-content-between">
+    <ul class="nav nav-tabs" role="tablist"
+        style="font-family: 'Oswald', sans-serif; text-align: center;text-shadow: 1px 0px 0px #000000;">
+        <li class="nav-item">
+            <a class="nav-link activeb bg-dark" data-toggle="tab" href="#home" style="color: white;">Usuarios</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link bg-dark" data-toggle="tab" href="#menu1" style=";color: white;">Socios</a>
+        </li>
+    </ul>
 
-                 <li class="nav-item">
-                     <a class="" href="http://localhost:8080/nuevo"><button type="button" class="btn btn-dark btn-xs" style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;">Agregar<br><img th:src="@{agregar.png}" height="45" width="45"/></button></a>
-                 </li>
-             </ul>
-        </div>
-        </nav>
-    </div>-->
 
-    <!--Termina Barra de Herramientas -->
+    <form class="form-inline col-3">
+        <a class="" href="http://localhost:8080/nuevo" data-toggle="tooltip" data-placement="left"
+           title="Agregar Usuario">
+            <button type="button" class="btn btn-dark btn-xs "
+                    style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{agregar.png}"
+                                                                                                height="30" width="30"/>
+            </button>
+        </a><br>
+        <a class="" href="http://localhost:8080/nuevoSocio" data-toggle="tooltip" data-placement="left"
+           title="Agregar Socio">
+            <button type="button" class="btn btn-dark "
+                    style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;"><img th:src="@{add_50px.png}"
+                                                                                                height="25" width="25"/>
+            </button>
+        </a>
+        <a href="http://localhost:8080/"></a>
+        <input class="form-control " type="search" placeholder="Buscar" aria-label="Search">
+        <a class="btn btn-dark btn-xs" style="padding: 0px;text-shadow: 1px 1px 1px #000000;"><img
+                th:src="@{buscar.png}" height="30" width="30"/></a>
+    </form>
+</div>
+<!--EmpiezaBarra de Herramientas -->
+<!-- <div class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top " style="font-family: 'Oswald';text-shadow: 1px 1px 1px #000000;color: white; text-align: center;font-size: 10px; padding: 0px" >
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+
+     <div class="collapse navbar-collapse" id="collapsibleNavbar">
+         <ul class="navbar-nav">
+
+              <li class="nav-item">
+                  <a class="" href="http://localhost:8080/nuevo"><button type="button" class="btn btn-dark btn-xs" style="font-size: 10px;padding: 0px;text-shadow: 1px 1px 1px #000000;">Agregar<br><img th:src="@{agregar.png}" height="45" width="45"/></button></a>
+              </li>
+          </ul>
+     </div>
+     </nav>
+ </div>-->
+
+<!--Termina Barra de Herramientas -->
 
 <br><br>
 <div class="container col-sm-12 ">
@@ -72,7 +95,8 @@
     <div class="tab-content" style="font-family: 'Oswald';">
         <div id="home" class="container-fluid tab-pane active">
             <div style="font-size: 18px">
-                <table class="table table-hover  table-condensed" id="tablaG"><!--table-bordered table-striped   nth-child(even) hover td style="background-color: #ddd;td-background-color: #369681-->
+                <table class="table table-hover  table-condensed" id="tablaG">
+                    <!--table-bordered table-striped   nth-child(even) hover td style="background-color: #ddd;td-background-color: #369681-->
                     <thread>
                         <tr style="color: white; background-color: #05dfd7;text-shadow: 1px 1px 1px #000000; text-align: center">
 
@@ -81,7 +105,7 @@
                             <th>Apellido Materno</th>
                             <th>Contraseña</th>
                             <th>Acción</th>
-                           <!-- <th>Eliminar</th>-->
+                            <!-- <th>Eliminar</th>-->
 
                         </tr>
                     </thread>
@@ -90,14 +114,26 @@
                         <!--<td> <input type="checkbox" class="custom-control-input" id="tableDefaultCheck1">
                             <label class="custom-control-label" for="tableDefaultCheck1"></label>
                         </td>-->
-                       <!-- <td th:text="${user.id}"></td>-->
+                        <!-- <td th:text="${user.id}"></td>-->
                         <td th:text="${user.nombre}"></td>
                         <td th:text="${user.aPaterno}"></td>
                         <td th:text="${user.aMaterno}"></td>
                         <td th:text="${user.contrasena}"></td>
-                        <td >
-                            <a th:href="@{/editar/}+${user.id}" data-toggle="tooltip" data-placement="left" title="Editar"><button type="button" class="btn btn-dark" style="font-size: 10px;padding: 0;align: right;"><img th:src="@{editar.png}" height="25" width="25"/></button></a>
-                            <a th:onclick="eliminar([[${user.id}]])"data-toggle="tooltip" data-placement="left" title="Borrar"><button type="button" class="btn btn-dark" style="font-size: 10px;padding: 0;align: right;"><img th:src="@{borrar.png}" height="25" width="25"/></button></a>
+                        <td>
+                            <a th:href="@{/editar/}+${user.id}" data-toggle="tooltip" data-placement="left"
+                               title="Editar">
+                                <button type="button" class="btn btn-dark"
+                                        style="font-size: 10px;padding: 0;align: right;"><img th:src="@{editar.png}"
+                                                                                              height="25" width="25"/>
+                                </button>
+                            </a>
+                            <a th:onclick="eliminar([[${user.id}]])" data-toggle="tooltip" data-placement="left"
+                               title="Borrar">
+                                <button type="button" class="btn btn-dark"
+                                        style="font-size: 10px;padding: 0;align: right;"><img th:src="@{borrar.png}"
+                                                                                              height="25" width="25"/>
+                                </button>
+                            </a>
                         </td>
                     </tr>
                     </tbody>
@@ -107,7 +143,8 @@
 
         <div id="menu1" class="container-fluid tab-pane fade">
             <div style="font-size: 18px">
-                <table class=" table table-hover  table-condensed" id="tsocios"><!--table-bordered table-striped   nth-child(even) hover td style="background-color: #ddd;td-background-color: #369681-->
+                <table class=" table table-hover  table-condensed" id="tsocios">
+                    <!--table-bordered table-striped   nth-child(even) hover td style="background-color: #ddd;td-background-color: #369681-->
                     <thread>
                         <tr style="color: white; background-color: #05dfd7;text-shadow: 1px 1px 1px #000000; text-align: center">
                             <!--<th>Id</th>-->
@@ -136,10 +173,22 @@
                         <td th:text="${userSocio.horarioDeLabor}"></td>
                         <td th:text="${userSocio.telefono}"></td>
 
-                            <!--Aqui cambiar por socio-->
+                        <!--Aqui cambiar por socio-->
                         <td>
-                            <a th:href="@{/editarSocio/}+${userSocio.id}" data-toggle="tooltip" data-placement="left" title="Editar"><button type="button" class="btn btn-dark" style="font-size: 10px;padding: 0;align: right;"><img th:src="@{editar.png}" height="25" width="25"/></button></a>
-                            <a th:onclick="eliminar([[${userSocio.id}]])"data-toggle="tooltip" data-placement="left" title="Borrar"><button type="button" class="btn btn-dark" style="font-size: 10px;padding: 0;align: right;"><img th:src="@{borrar.png}" height="25" width="25"/></button></a>
+                            <a th:href="@{/editarSocio/}+${userSocio.id}" data-toggle="tooltip" data-placement="left"
+                               title="Editar">
+                                <button type="button" class="btn btn-dark"
+                                        style="font-size: 10px;padding: 0;align: right;"><img th:src="@{editar.png}"
+                                                                                              height="25" width="25"/>
+                                </button>
+                            </a>
+                            <a th:onclick="eliminar([[${userSocio.id}]])" data-toggle="tooltip" data-placement="left"
+                               title="Borrar">
+                                <button type="button" class="btn btn-dark"
+                                        style="font-size: 10px;padding: 0;align: right;"><img th:src="@{borrar.png}"
+                                                                                              height="25" width="25"/>
+                                </button>
+                            </a>
 
                         </td>
                     </tr>
@@ -151,19 +200,21 @@
 </div>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+-->
 <script src="funciones.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
 </body>
 </html>
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#tablaG').DataTable();
-    } );
+    });
 
 </script>
